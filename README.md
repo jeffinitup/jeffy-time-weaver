@@ -1,5 +1,5 @@
 # Jeffy's Time Weaver for Better Than Wolves
-A simple Better Than Wolves addon that allows you to dilate how long a day and night cycle lasts. Does not affect tick speed or total play time
+A simple Better Than Wolves addon that allows you to dilate how long a day and night cycle lasts. Does not affect tick speed or total world time
 
 ## Features
 - ``/dilate``: controls the scalar for daylight and night length
