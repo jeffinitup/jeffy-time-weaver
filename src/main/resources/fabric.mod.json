@@ -3,27 +3,24 @@
   "id": "${mod_id}",
   "version": "${version}+BTW-${btw_version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Control the flow of time!",
   "authors": [
-    "Me!"
+    "jeffyjamzhd"
   ],
   "contact": {
-    "homepage": "https://legacyfabric.net/",
-    "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
+    "homepage": "https://www.jefftastic.dev/",
+    "sources": "https://github.com/jeffinitup/jeffy-time-weaver"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/jtw/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ],
     "btw:addon": [
-      "btw.community.example.ExampleAddon"
+      "dev.jefftastic.JeffyTimeWeaverAddon"
     ]
   },
   "custom": {
-    "btw:addon_prefix": "EX"
+    "btw:addon_prefix": "JTW"
   },
   "mixins": [
     "${mod_id}.mixins.json"

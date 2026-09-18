@@ -1,0 +1,14 @@
+commands.dilate.usage=/dilate [day|night] <percent>
+commands.dilate.current=Current dilation for %s is %d%%
+commands.dilate.period.day=day
+commands.dilate.period.night=night
+commands.dilate.set=Set time dilation for %s to %d%%
+commands.dilate.error.negative=Dilation cannot be negative
+
+commands.realtime.usage=/realtime [on|off] or /rt [on|off]
+commands.realtime.warn=Real Time is experimental, use at your own risk!
+commands.realtime.set=Real Time mode is now %s
+commands.realtime.enabled=enabled
+commands.realtime.disabled=disabled
+
+commands.time.disabled=Command is unsupported when Real Time is active
