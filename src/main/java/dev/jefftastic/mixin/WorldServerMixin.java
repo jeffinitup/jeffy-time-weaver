@@ -14,7 +14,7 @@ abstract public class WorldServerMixin {
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/src/WorldInfo;setWorldTime(J)V", ordinal = 0))
     private void setTimeAdjusted(WorldInfo instance, long par1) {
         if (!(instance instanceof DerivedWorldInfo)) {
-            this.serverTimeBuffer = JeffyTimeWeaverAddon.updateTime(instance, par1, this.serverTimeBuffer);
+            this.serverTimeBuffer = JeffyTimeWeaverAddon.updateTime((World) (Object) this, par1, this.serverTimeBuffer);
         }
 
     }

@@ -61,17 +61,18 @@ public class JeffyTimeWeaverAddon extends BTWAddon {
     /**
      * Handles time updates on client and server
      *
-     * @param info World info
+     * @param world World instance
      */
-    public static double updateTime(WorldInfo info, long time, double buffer) {
+    public static double updateTime(World world, long time, double buffer) {
         // Get values from world
+        WorldInfo info = world.getWorldInfo();
         boolean isRealTime = info.getData(JeffyTimeWeaverAddon.REAL_TIME);
         double dayFactor = info.getData(JeffyTimeWeaverAddon.DAY_DILATION);
         double nightFactor = info.getData(JeffyTimeWeaverAddon.NIGHT_DILATION);
 
-        // If real time, run that instead
+        // If real time, run that instead (on the server)
         if (isRealTime) {
-            return updateRealTime(info);
+            return !world.isRemote ? updateRealTime(info) : buffer;
         }
 
         // Dilate based on time of day
